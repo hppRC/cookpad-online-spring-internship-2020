@@ -18,6 +18,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "main.services.v1.ListRecipesResponse" do
       repeated :recipes, :message, 1, "main.resources.v1.Recipe"
+      optional :count, :uint64, 2
     end
     add_message "main.services.v1.CreateRecipeRequest" do
       optional :recipe, :message, 1, "main.resources.v1.Recipe"

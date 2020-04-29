@@ -15,7 +15,7 @@ class UserService < Main::Services::V1::User::Service
     page = request.page unless request.page.zero?
     per_page = request.per_page unless request.per_page.zero?
 
-    # TODO: Use index
+    # ここダメっぽい、as_protocol_bufferの実装をみてN+1起こりそうなところを読む必要あり
     users = User.
       order(created_at: :desc).
       page(page).
